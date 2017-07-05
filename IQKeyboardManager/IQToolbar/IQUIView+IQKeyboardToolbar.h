@@ -44,7 +44,7 @@
 /**
  `placeholderText` to override default `placeholder` text when drawing text on toolbar.
  */
-@property (nullable, strong, nonatomic) NSString* placeholderText;
+@property (nullable, strong, nonatomic) NSString* iqPlaceholderText;
 
 /**
  `drawingPlaceholderText` will be actual text used to draw on toolbar. This would either `placeholder` or `placeholderText`.

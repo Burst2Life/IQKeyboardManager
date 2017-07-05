@@ -54,9 +54,9 @@
     return [shouldHidePlaceholderText boolValue];
 }
 
--(void)setPlaceholderText:(NSString*)placeholderText
+-(void)setIqPlaceholderText:(NSString*)placeholderText
 {
-    objc_setAssociatedObject(self, @selector(placeholderText), placeholderText, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(iqPlaceholderText), placeholderText, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
     if ([self respondsToSelector:@selector(placeholder)] && [self.inputAccessoryView respondsToSelector:@selector(setTitle:)])
     {
@@ -66,9 +66,9 @@
     }
 }
 
--(NSString*)placeholderText
+-(NSString*)iqPlaceholderText
 {
-    NSString *placeholderText = objc_getAssociatedObject(self, @selector(placeholderText));
+    NSString *placeholderText = objc_getAssociatedObject(self, @selector(iqPlaceholderText));
     return placeholderText;
 }
 
@@ -78,9 +78,9 @@
     {
         return nil;
     }
-    else if (self.placeholderText.length != 0)
+    else if (self.iqPlaceholderText.length != 0)
     {
-        return self.placeholderText;
+        return self.iqPlaceholderText;
     }
     else if ([self respondsToSelector:@selector(placeholder)])
     {
